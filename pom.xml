@@ -3,12 +3,12 @@
   
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>com.stackabuse</groupId>
-  <artifactId>xmltutorial</artifactId>
+  <groupId>mseries.xml</groupId>
+  <artifactId>XMLDeserialise</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
 
-  <name>xmltutorial</name>
+  <name>XMLDeserialise</name>
   
   <url>http://maven.apache.org</url>
 
@@ -70,7 +70,7 @@
                           <transformers>
                               <transformer
                                       implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                  <mainClass>com.stackabuse.App</mainClass>
+                                  <mainClass>mseries.xml.App</mainClass>
                               </transformer>
                           </transformers>
                       </configuration>

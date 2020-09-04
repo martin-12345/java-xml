@@ -21,4 +21,7 @@ $ cd java-xml
 $ mvn package
 ```
 
-4. Run the main method  in App.java
+4. Run the main method  in App.java at the command line like this or in your IDE
+```
+$ java -jar target/XMLDeserialise.jar
+```
