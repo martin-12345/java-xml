@@ -1,0 +1,25 @@
+<CarwebDetails>
+	<ApplicationArea>
+		<Date>14-Sept-2020</Date>
+		<Caller>martin</Caller>
+	</ApplicationArea>
+	<DataArea>
+		<Error>
+			<message>No Message</message>
+		</Error>
+		<Vehicles>
+			<Vehicle>
+				<VRM_Curr>AJ05PHO</VRM_Curr>
+				<Ktype>1234</Ktype>
+				<EngineCode>BLP</EngineCode>
+				<Fuel>PETROL</Fuel>
+			</Vehicle>
+			<Vehicle>
+				<VRM_Curr>YZ11BZE</VRM_Curr>
+				<Ktype>9876</Ktype>
+				<EngineCode>BLP</EngineCode>
+				<Fuel>Diesel</Fuel>
+			</Vehicle>
+		</Vehicles>
+	</DataArea>
+</CarwebDetails>
