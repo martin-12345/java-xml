@@ -2,7 +2,7 @@
 
 # Manipulating XML in Java using Jackson
 
-This repository contains the code for this [blogpost](https://stackabuse.com/serialize-and-deserialize-xml-in-java-with-jackson/) on [StackAbuse](https://stackabuse.com/).
+This repository contains the code from this [blogpost](https://stackabuse.com/serialize-and-deserialize-xml-in-java-with-jackson/) on [StackAbuse](https://stackabuse.com/). Modified by me to test things out. Thanks to the original author.
 
 ## Getting Started
 
