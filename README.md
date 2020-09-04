@@ -25,3 +25,10 @@ $ mvn package
 ```
 $ java -jar target/XMLDeserialise.jar
 ```
+
+### Discussion
+Start by examining the sample XML in to_deserialize.xml, this represented by the class ResponseData.java in which you will see fields representing the main parts of the XML Document, ApplicaionArea and DataArea. We have
+Java classes for these. The Vehicles section in the XML is a collection of Vehicle elements, this is 
+reproduced in the DataArea with List<Vehicle> and the annotations direct the mapping. 
+
+Examining the JsonProperty annotations should make it clear what is mapped to what.
