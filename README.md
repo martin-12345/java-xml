@@ -1,5 +1,3 @@
-[![HitCount](http://hits.dwyl.io/ro6ley/java-xml.svg)](http://hits.dwyl.io/ro6ley/java-xml)
-
 # Manipulating XML in Java using Jackson
 
 This repository contains the code from this [blogpost](https://stackabuse.com/serialize-and-deserialize-xml-in-java-with-jackson/) on [StackAbuse](https://stackabuse.com/). Modified by me to test things out. Thanks to the original author.
@@ -19,7 +17,7 @@ Kindly ensure you have the following installed on your machine:
 
 1. Clone the repository
 ```
-$ git clone https://github.com/ro6ley/java-xml.git
+$ git clone https://github.com/martin-12345/java-xml.git
 ```
 
 2. Check into the cloned repository
@@ -32,15 +30,4 @@ $ cd java-xml
 $ mvn package
 ```
 
-4. Run the web scraper
-```
-java -jar target/xmltutorial-1.0.jar
-```
-
-## Contribution
-
-Please feel free to raise issues using this [template](./.github/ISSUE_TEMPLATE.md) and I'll get back to you.
-
-You can also fork the repository, make changes and submit a Pull Request using this [template](./.github/PULL_REQUEST_TEMPLATE.md).
-
-# java-xml
+4. Run the main method  in App.java

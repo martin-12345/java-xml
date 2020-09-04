@@ -9,10 +9,6 @@ public class ResponseData {
 	@JsonProperty("DataArea")
 	private DataArea data;
 
-	public ResponseData() {
-		// default contructor
-	}
-
 	public DataArea getData() {
 		return data;
 	}
