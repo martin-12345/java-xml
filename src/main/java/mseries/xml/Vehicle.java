@@ -14,20 +14,57 @@
  */
 package mseries.xml;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "Vehicle")
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Vehicle {
-	@JsonProperty("VRM_Curr")
-	String vrm;
-	@JsonProperty("Fuel")
-	String fuel;
-	@JsonProperty("Ktype")
-	String ktype;
-	@JsonProperty("EngineCode")
-	String engineCode;
+	private String vrm;
+	private String fuel;
+	private String ktype;
+	private String engineCode;
 
-	
+	@XmlElement(name="VRM_Curr")
+	public String getVrm() {
+		return vrm;
+	}
+
+	public void setVrm(String VRM_Curr) {
+		this.vrm = VRM_Curr;
+	}
+
+	@XmlElement(name="Fuel")
+	public String getFuel() {
+		return fuel;
+	}
+
+	public void setFuel(String fuel) {
+		this.fuel = fuel;
+	}
+
+	@XmlElement(name="Ktype")
+	public String getKtype() {
+		return ktype;
+	}
+
+	public void setKtype(String ktype) {
+		this.ktype = ktype;
+	}
+
+	@XmlElement(name="EngineCode")
+	public String getEngineCode() {
+		return engineCode;
+	}
+
+	public void setEngineCode(String engineCode) {
+		this.engineCode = engineCode;
+	}
+
 	public String toString() {
-		return	"vrm="+vrm;
+		return	"vrm="+getVrm();
 	}
 }

@@ -14,19 +14,20 @@
  */
 package mseries.xml;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.xml.bind.annotation.XmlElement;
 
 public class ApplicationArea {
 	
-	@JsonProperty("Date")
 	private String date;
-	@JsonProperty("Caller")
+	@XmlElement(name="Caller")
 	private String caller;
 		
 
 	/**
 	 * @return the date
 	 */
+	@XmlElement(name="Date")
 	public String getDate() {
 		return date;
 	}

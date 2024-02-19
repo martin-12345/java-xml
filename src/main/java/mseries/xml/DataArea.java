@@ -14,19 +14,20 @@
  */
 package mseries.xml;
 
-import java.util.List;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-
+@XmlRootElement(name = "DataArea")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DataArea {
 
 
-	@JsonProperty("Vehicles")
-	@JacksonXmlElementWrapper(localName = "Vehicles")
-	private List<Vehicle> vehicles;
-	
-	@JsonProperty("Error")
+	@XmlElement(name = "Vehicles", type = Vehicles.class)
+	private Vehicles vehicles;
+
+	@XmlElement(name = "ErrorArea")
 	private ErrorArea error;
 	
 	public boolean hasVehicles() {
@@ -34,11 +35,18 @@ public class DataArea {
 	}
 	
 	public int getVehicleCount() {
-		return vehicles == null ? 0 : vehicles.size();
+		return vehicles == null ? 0 : vehicles.getVehicles().size();
 	}
 	
-	public Vehicle getVehicleAt(int n) {
-		return vehicles.get(n);
+	public String getVehicleAt(int i) {
+		return vehicles.getVehicles().get(i).getVrm();
 	}
 
+	public ErrorArea getError() {
+		return error;
+	}
+
+	public void setError(ErrorArea error) {
+		this.error = error;
+	}
 }

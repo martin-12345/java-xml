@@ -14,10 +14,10 @@
  */
 package mseries.xml;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.XmlElement;
 
 public class ErrorArea {
 
-	@JsonProperty("message")
+	@XmlElement(name="message")
 	private String message;
 }

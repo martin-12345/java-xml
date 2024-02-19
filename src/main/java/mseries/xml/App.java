@@ -1,10 +1,10 @@
 package mseries.xml;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 
 public class App {
 
@@ -14,13 +14,15 @@ public class App {
 	 */
 	public static void deserializeFromXML() {
 		try {
-			XmlMapper xmlMapper = new XmlMapper();
 
 			// read file and put contents into the string
-			String readContent = new String(Files.readAllBytes(Paths.get("to_deserialize.xml")));
 
 			// deserialize from the XML into a PhoneDetails object
-			ResponseData deserializedData = xmlMapper.readValue(readContent, ResponseData.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(ResponseData.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+
+			ResponseData deserializedData = (ResponseData) jaxbUnmarshaller.unmarshal(new File("to_deserialize.xml"));
+
 
 			// Print object details
 			System.out.println("Deserialized data: ");
@@ -31,8 +33,8 @@ public class App {
 				System.out.println(deserializedData.getData().getVehicleAt(i));
 			}
 
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (JAXBException e) {
+			throw new RuntimeException(e);
 		}
 	}
 

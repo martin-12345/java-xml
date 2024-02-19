@@ -1,12 +1,17 @@
 package mseries.xml;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "CarDetails")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ResponseData {
-	@JsonProperty("ApplicationArea")
+	@XmlElement(name ="ApplicationArea")
 	private ApplicationArea application;
 
-	@JsonProperty("DataArea")
+	@XmlElement(name ="DataArea")
 	private DataArea data;
 
 	public DataArea getData() {
@@ -17,4 +22,11 @@ public class ResponseData {
 		this.data = data;
 	}
 
+	public ApplicationArea getApplication() {
+		return application;
+	}
+
+	public void setApplication(ApplicationArea application) {
+		this.application = application;
+	}
 }
