@@ -15,10 +15,16 @@
 package mseries.xml;
 
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "DataArea")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ApplicationArea {
-	
+
+	@XmlElement(name="Date")
 	private String date;
 	@XmlElement(name="Caller")
 	private String caller;
@@ -27,7 +33,6 @@ public class ApplicationArea {
 	/**
 	 * @return the date
 	 */
-	@XmlElement(name="Date")
 	public String getDate() {
 		return date;
 	}

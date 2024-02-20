@@ -8,6 +8,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "CarDetails")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ResponseData {
+
 	@XmlElement(name ="ApplicationArea")
 	private ApplicationArea application;
 

@@ -21,6 +21,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Vehicles")
 public class Vehicles {
+
     @XmlElement(name = "Vehicle", type = Vehicle.class)
     private List<Vehicle> vehicles = new ArrayList<Vehicle>();
 

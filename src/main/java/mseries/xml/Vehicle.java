@@ -21,14 +21,18 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Vehicle")
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Vehicle {
-	private String vrm;
-	private String fuel;
-	private String ktype;
-	private String engineCode;
 
 	@XmlElement(name="VRM_Curr")
+	private String vrm;
+	@XmlElement(name="Fuel")
+	private String fuel;
+	@XmlElement(name="Ktype")
+	private String ktype;
+	@XmlElement(name="EngineCode")
+	private String engineCode;
+
 	public String getVrm() {
 		return vrm;
 	}
@@ -37,7 +41,6 @@ public class Vehicle {
 		this.vrm = VRM_Curr;
 	}
 
-	@XmlElement(name="Fuel")
 	public String getFuel() {
 		return fuel;
 	}
@@ -46,7 +49,6 @@ public class Vehicle {
 		this.fuel = fuel;
 	}
 
-	@XmlElement(name="Ktype")
 	public String getKtype() {
 		return ktype;
 	}
@@ -55,7 +57,6 @@ public class Vehicle {
 		this.ktype = ktype;
 	}
 
-	@XmlElement(name="EngineCode")
 	public String getEngineCode() {
 		return engineCode;
 	}
